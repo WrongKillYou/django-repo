@@ -16,7 +16,7 @@ class User(AbstractUser):
 class Student(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     lrn = models.CharField(max_length=50, unique=True)
-    grade = models.CharField(max_length=10)
+    level = models.CharField(max_length=10)
     section = models.CharField(max_length=50)
     parent_name = models.CharField(max_length=255)
     parent_email = models.EmailField()
